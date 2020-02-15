@@ -1,5 +1,5 @@
 ### Slack files remover
-* Delete files before 30 days
+* Remove old files in slack workspace
 
 ## Base source code
 * https://gist.github.com/jamescmartinez/909401b19c0f779fc9c1
