@@ -22,11 +22,11 @@
     * Note: Token starts with 'xoxp-'
 
 ## How to Setup Gems
-* $ bundle install
-* $ echo 'TOKEN=xoxp-your-slack-token-hogehoge' > .env
+* $ `bundle install`
+* $ `echo 'TOKEN=xoxp-your-slack-token-hogehoge' > .env`
 
 ## How to execute
-* $ bundle exec ruby files-remover.rb
+* $ `bundle exec ruby files-remover.rb`
 
 ## License
 * MIT
