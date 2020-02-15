@@ -24,16 +24,16 @@ def delete_files(file_ids)
     uri = URI.parse('https://slack.com/api/files.delete')
     uri.query = URI.encode_www_form(params)
     response = Net::HTTP.get_response(uri)
-    p "#{file_id}: #{JSON.parse(response.body)['ok']}"
+    p "#{Time.now}: #{file_id}: #{JSON.parse(response.body)['ok']}"
+    sleep 1 + (Random.rand * 2)
   end
 end
 
-20.times do |i|
-  puts "count: #{i}"
+while true
   files = list_files
-  file_ids = files.map { |f| f['id'] }
-  delete_files(file_ids)
+  break if files.empty?
+  delete_files(files.map{|f| f['id'] })
   num = 100 + (Random.rand * 50)
-  puts num
+  puts('----------  ' + num.to_s + '  ----------')
   sleep num
 end
